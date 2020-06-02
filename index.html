@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch the number!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&display=swap">
+</head>
+
+<body onload="init()">
+
+    <div class="container">
+        <div class="game-settings">
+            <button onclick="init()" class="new-game-button">New Game</button>
+            <input onclick="init()" type="radio" name="difficulty" value="16" data-name="easy" checked>Easy (16)
+            <input onclick="init()" type="radio" name="difficulty" value="25" data-name="hard">Hard (25)
+            <input onclick="init()" type="radio" name="difficulty" value="36" data-name="crazy">Crazy! (36)
+        </div>
+        <div class="game-indicators">
+            <span class="stopwatch"></span>
+            <span class="next-number">Next Number:<br />1</span>
+        </div>
+
+        <div class="highscore">New Highscore!</div>
+        <table class="game-board"></table>
+
+        <!-- Not required in exercise -->
+        <table class="game-scores">
+            <tr>
+                <td colspan="2" style="border: none; font-weight: bold;">Best Scores</td>
+            </tr>
+            <tr>
+                <td>Easy</td>
+                <td class="easy-score">-</td>
+            </tr>
+            <tr>
+                <td>Hard</td>
+                <td class="hard-score">-</td>
+            </tr>
+            <tr>
+                <td>Crazy!</td>
+                <td class="crazy-score">-</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
